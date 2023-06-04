@@ -19,6 +19,7 @@ RUN gdown https://drive.google.com/uc?id=1m0d8ruUY8RvCP9eVjZw4Nc8LAwM8yuGV
 RUN python3.8 -m pip install torchvision-*.whl
 
 RUN git clone https://github.com/Ewangelina/yolov5.git
+COPY ./setup /yolov5
 WORKDIR yolov5
 RUN python3.8 -m pip install -r requirements.txt
 COPY is_docker.patch .
