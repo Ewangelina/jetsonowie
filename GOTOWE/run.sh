@@ -9,4 +9,5 @@ sudo docker run \
        -e DISPLAY=$DISPLAY \
        -e LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libgomp.so.1 \
        -v /tmp/.X11-unix/:/tmp/.X11-unix \
+       -v $(pwd)/output:/yolov5/output \
        yolov5 python3.8 detect.py --source 0 --class 3
